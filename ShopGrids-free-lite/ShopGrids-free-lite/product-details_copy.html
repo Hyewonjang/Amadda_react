@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>아맞다(생필품 구매 사이트) - 상품 페이지</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/logo_amadda_2.png" />
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <!-- Start Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="top-left">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="top-middle">
+                            <!-- {% if user.is_authenticated %} -->
+                                <ul class="useful-links" hidden>
+                                    <!-- <li><a href="shopping_basket.html">장바구니</a></li> -->
+                                    <li><a href="purchase_history.html">구매 내역</a></li>
+                                    <li><a href="purchase_cycle.html">구매주기 설정 사항</a></li>
+                                </ul>
+                            <!--{% else %}-->
+                                <div style="font-size: 15px; color : white; font-weight: 400;">환영합니다.</div>
+                            <!-- {% endif %} -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="top-end">
+                            <div class="user">
+                                <i class="lni lni-user"></i>
+                                <span>안녕하세요!님</span>
+                                <span hidden>{user_name}</span>
+                            </div>
+                            <ul class="user-login" style="color:white; font-weight:400">
+                                <li>
+                                    <a href="login.html">로그인</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">회원가입</a>
+                                </li>
+                            </ul>
+                            <ul class="user-login" hidden>
+                                <li>
+                                    <a href="logout.html">로그아웃</a>
+                                </li>
+                                <li>
+                                    <a href="mypage.html">마이페이지</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Topbar -->
+        <!-- Start Header Middle -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3 col-7">
+                        <!-- Start Header Logo -->
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/images/logo/logo_amadda.png" alt="Logo">
+                        </a>
+                        <!-- End Header Logo -->
+                    </div>
+                    <div class="col-lg-5 col-md-7 d-xs-none">
+                        <!-- Start Main Menu Search -->
+                        <div class="main-menu-search">
+                            <!-- navbar search start -->
+                            <div class="navbar-search search-style-5">
+                                <div class="search-select">
+                                    <!-- <div class="select-position">
+                                        <select id="select1">
+                                            <option selected>All</option>
+                                            <option value="1">option 01</option>
+                                            <option value="2">option 02</option>
+                                            <option value="3">option 03</option>
+                                            <option value="4">option 04</option>
+                                            <option value="5">option 05</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+                                <div class="search-input">
+                                    <input type="text" placeholder="Search">
+                                </div>
+                                <div class="search-btn">
+                                    <button><i class="lni lni-search-alt"></i></button>
+                                </div>
+                            </div>
+                            <!-- navbar search Ends -->
+                        </div>
+                        <!-- End Main Menu Search -->
+                    </div>
+                    <div class="col-lg-4 col-md-2 col-5" id='shopping-list_sc_li' style="display: none;">
+                        <div class="middle-right-area">
+                            <div class="nav-hotline">
+                                
+                            </div>
+                            <div class="navbar-cart">
+                                <!-- <div class="wishlist">
+                                    <a href="javascript:void(0)">
+                                        <i class="lni lni-heart"></i>
+                                        <span class="total-items">n</span>
+                                    </a>
+                                </div> -->
+                                <!--wishlist-->
+                                <div class="cart-items" style="margin-left :10px;">
+                                    <a href="javascript:void(0)" class="main-btn">
+                                        <i class="lni lni-heart"></i>
+                                        <span class="total-items">2</span>
+                                    </a>
+                                    <!-- Shopping Item -->
+                                    <div class="shopping-item">
+                                        <div class="dropdown-cart-header">
+                                            <span>2개</span>
+                                            <a href="shopping_basket.html">찜</a>
+                                        </div>
+                                        <ul class="shopping-list">
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/products/product-9.jpg" alt="#"></a>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">
+                                                            화장품 용기</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">8000원</span></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/products/product-10.jpg" alt="#"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">35온스 세제</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">10000원</span></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/ End Shopping Item -->
+                                </div>
+                                <div class="cart-items">
+                                    <a href="javascript:void(0)" class="main-btn" style="margin-left: 10px;">
+                                        <i class="lni lni-cart"></i>
+                                        <span class="total-items">2</span>
+                                    </a>
+                                    <!-- Shopping Item -->
+                                    <div class="shopping-item">
+                                        <div class="dropdown-cart-header">
+                                            <span>2개</span>
+                                            <a href="shopping_basket.html">장바구니</a>
+                                        </div>
+                                        <ul class="shopping-list">
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/products/product-9.jpg" alt="#"></a>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">
+                                                            화장품 용기</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">8000원</span></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/products/product-10.jpg" alt="#"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">35온스 세제</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">10000원</span></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="bottom">
+                                            <div class="total">
+                                                <span>전체 합계</span>
+                                                <span class="total-amount">18000원</span>
+                                            </div>
+                                            <div class="button">
+                                                <a href="checkout.html" class="btn animate">주문하기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ End Shopping Item -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Middle -->
+        <!-- Start Header Bottom -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 col-12">
+                    <div class="nav-inner">
+                        <!-- Start Mega Category Menu -->
+                        <div class="mega-category-menu">
+                            <span class="cat-button"><i class="lni lni-menu"></i>전체 카테고리</span>
+                            <ul class="sub-category">
+                                <li><a href="product-grids.html">욕실 용품<i class="lni lni-chevron-right"></i></a>
+                                    <ul class="inner-sub-category">
+                                        <li><a href="product-grids.html">칫솔/치약/비누</a></li>
+                                        <li><a href="product-grids.html">화장실 휴지</a></li>
+                                        <li><a href="product-grids.html">수건</a></li>
+                                        <li><a href="product-grids.html">욕실 슬리퍼</a></li>
+                                        <li><a href="product-grids.html">샴푸/린스/바디워시</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="product-grids.html">청소.세탁 용품<i class="lni lni-chevron-right"></i></a>
+                                    <ul class="inner-sub-category">
+                                        <li><a href="product-grids.html">물티슈</a></li>
+                                        <li><a href="product-grids.html">빗자루/청소기</a></li>
+                                        <li><a href="product-grids.html">휴지통/쓰레기봉투</a></li>
+                                        <li><a href="product-grids.html">빨래 건조대</a></li>
+                                        <li><a href="product-grids.html">세탁 세제</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="product-grids.html">침구류<i class="lni lni-chevron-right"></i></a>
+                                    <ul class="inner-sub-category">
+                                        <li><a href="product-grids.html">침대/매트리스</a></li>
+                                        <li><a href="product-grids.html">이불/베개</a></li>
+                                        <li><a href="product-grids.html">온수매트</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="product-grids.html">주방용품<i class="lni lni-chevron-right"></i></a>
+                                    <ul class="inner-sub-category">
+                                        <li><a href="product-grids.html">숟가락/젓가락</a></li>
+                                        <li><a href="product-grids.html">접시</a></li>
+                                        <li><a href="product-grids.html">물컵</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="product-grids.html">식품<i class="lni lni-chevron-right"></i></a>
+                                    <ul class="inner-sub-category">
+                                        <li><a href="product-grids.html">생수/음료</a></li>
+                                        <li><a href="product-grids.html">간편조리식품</a></li>
+                                        <li><a href="product-grids.html">건강식품</a></li>
+                                        <li><a href="product-grids.html">과자/간식</a></li>
+                                    </ul>
+                                </li>    
+                                <li><a href="product-grids.html">기타<i class="lni lni-chevron-right"></i></a>
+                                    <ul class="inner-sub-category">
+                                        <li><a href="product-grids.html">책상/의자</a></li>
+                                        <li><a href="product-grids.html">기초화장품</a></li>
+                                        <li><a href="product-grids.html">전자제품</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Mega Category Menu -->
+                        <!-- Start Navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            
+                        </nav>
+                        <!-- End Navbar -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Nav Social -->
+                    <div class="nav-social">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><i class="lni lni-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><i class="lni lni-skype"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Nav Social -->
+                </div>
+            </div>
+        </div>
+        <!-- Start Header Bottom -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title" style="display: inline-block; margin-right: 10px;">샴푸 펌프 병(대형)</h1>
+                        <span>상품번호 : {product_number}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html"><i class="lni lni-home"></i> 홈</a></li>
+                        <li><a href="product-grids.html">욕실용품</a></li>
+                        <li>샴푸/린스/바디워시</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Start Item Details -->
+    <section class="item-details section">
+        <div class="container">
+            <div class="top-area">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="product-images">
+                            <main id="gallery">
+                                <div class="main-img">
+                                    <!--<a href="https://kr.freepik.com/free-psd/large-pump-bottle-mockup_12038968.htm#query=shampoo&position=0&from_view=keyword">작가 pmvchamara</a> 출처 Freepik-->
+                                    <img src="assets/images/product-details/product_sample1_shampoo.jpg" id="current" alt="#">
+                                </div>
+                                <div class="images">
+                                    <img src="" class="img" alt="" style="background-color:rgb(234, 228, 228)">
+                                    <img src="" class="img" alt="" style="background-color:rgb(234, 228, 228)">
+                                    <img src="" class="img" alt="" style="background-color:rgb(234, 228, 228)">
+                                    <img src="" class="img" alt="" style="background-color:rgb(234, 228, 228)">
+                                    <img src="" class="img" alt="" style="background-color:rgb(234, 228, 228)">
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="product-info" style="margin-top: 20px">
+                            <h2 class="title">샴푸 펌프 병(대형)</h2>
+                            <p class="category"><img src="assets/images/product-details/rating.PNG" style="height:30px;"><span style="font-size:small; margin: 0px 3px;">({rater_num})</span> | <span style="margin:0px 3px;">{buy_num}</span></span></p>
+                            <p class="category"><i class="lni lni-tag"></i> 판매처:<a href="{vendor링크}">{vendor}</a></p>
+                            <h3 class="price">
+                                <div style="display:inline-block; color:red;">{sale}%</div> 
+                                <span style="font-size:small; margin-left: 5px;">{original_price}원</span> 
+                                <div style="display: inline-block; font-size:medium; margin-left: 5px;">{sale_price}원</div>
+                            </h3>
+                            <p class="info-text">
+                                {product_info}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt
+                                ut labore et dolore magna aliqua.
+                            </p>
+                            <div>
+                                <div><span style="margin-top:2px; margin-bottom:3px; color:rgb(240, 88, 32); font-weight: 600;">배송료</span></div>
+                                <div style="margin-left:20px; margin-bottom:1px;">- 무료배송 {free_delivery_ox}</div>
+                                <div style="margin-left:20px;">- 추가배송료</div>
+                                <div style="margin-left:30px;">{additional_delivery_cost}</div>
+                                <hr style="color:lightgray"/>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div style="display:block; background-color: rgb(192, 198, 205); border-radius: 10px; color: black; padding-bottom: 15px;">
+                                        <div style="padding-top:15px; padding-left: 15px; height: 25px;">수량</div>
+                                        <hr style="width:465px; text-align:center; color: gray; margin-top:20px; margin-left:10px;"/>
+                                        <span style="margin-left:10px; display: flex;">
+                                            <div>
+                                                <button onclick="minus_num()" style="display:inline; background-color: whitesmoke; border-color:gray; padding: 0px 5px;">-</button>
+                                                <span style="background-color: whitesmoke; padding: 1px 5px; border: 1px solid gray;">{num}</span>
+                                                <button onclick="plus_num()" style="display:inline; background-color: whitesmoke; padding: 0px 5px; border-color: gray;">+</button>
+                                            </div>
+                                            <div style="text-align:left; margin-left: auto; margin-right:20px">{total_price}원</span>
+                                        </span>
+                                        
+                                    </div>
+                            </div>
+                            <div class="bottom-content">
+                                <div class="row align-items-end">
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="button cart-button">
+                                            <button class="btn" style="width: 100%;"><i class="lni lni-cart"></i>장바구니</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="button2 cart-button">
+                                            <button class="btn">구매하기</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="wish-button">
+                                            <button class="btn"><i class="lni lni-heart"></i>찜</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-details-info">
+                <div class="single-block">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="info-body custom-responsive-margin">
+                                <h4>상품 소개</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                                <h4 style="margin-top:50px">교환/반품 정보</h4>
+                                <ul class="features">
+                                    <li>반품배송비(편도) : 편도 {return_cost}원</li>
+                                    <li>교환배송비(왕복) : 편도 {exchange_cost}원</li>
+                                    <li>보내실 곳 : {address}</li>
+                                    <li style="margin-bottom: 5px">교환조건</li>
+                                        <div style="margin-left: 15px;">{exchange_condition}</div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-body">
+                                <h4>판매자 정보</h4>
+                                <ul class="normal-list">
+                                    <li><span>상호명 : </span>{business_name}</li>
+                                    <li><span>대표자 : </span>{representative}</li>
+                                    <li><span>연락처 : </span>{phone_number}</li>
+                                    <li><span>통신판매업자번호 : </span>{supplier_number_1}</li>
+                                    <li><span>사업자등록번호 : </span>{company_register_num}</li>
+                                    <li><span>사업장소재지 : </span>{business_location}</li>
+                                    <li><span>Email : </span>{business_email}</li>
+                                </ul>
+                                <h4 style="margin-top:50px;">주의사항</h4>
+                                <ul class="normal-list">
+                                    <li>전자상거래 등에서의 소비자보호법에 관한 법률에 의거하여 미성년자가 물품을 구매하는 경우, 법정대리인이 동의하지 않으면 미성년자 본인 또는 법정대리인이 구매를 취소할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id='review' class="product-details-info">
+            <div class="single-block">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <ul id='review_stars' class="info-body custom-responsive-margin">
+                            <h4>구매후기</h4>
+                            <h5 style="margin-bottom: 10px; font-weight: 400;"><span style="color:red; font-weight:bold;">{total_rate}</span> ({rater_num})</h5>
+                            <li class="stars" style="color:orange;">
+                                <span style="margin : 0px 10px; color: gray;">5점 - {5stars_num}</span>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                            </li>
+                            <li class="stars" style="color:orange;">
+                                <span style="margin : 0px 10px; color: gray;">4점 - {4stars_num}</span>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star"></i>
+                            </li>
+                            <li class="stars" style="color:orange;">
+                                <span style="margin : 0px 10px; color: gray;">3점 - {3stars_num}</span>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                            </li>
+                            <li class="stars" style="color:orange;">
+                                <span style="margin : 0px 10px; color: gray;">2점 - {2stars_num}</span>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                            </li>
+                            <li class="stars" style="color:orange;">
+                                <span style="margin : 0px 10px; color: gray;">1 점 - {1stars_num}</span>
+                                <i class="lni lni-star-filled" style="margin-left:2px"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                            </li>
+                            <li class="stars" style="color:orange;">
+                                <span style="margin : 0px 10px; color: grey;">0점 - {0stars_num}</span>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                                <i class="lni lni-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="latest_review">
+                            <h5 style="font-weight:500;">최신 리뷰</h5>
+                            <hr/>
+                            <div class='single-review' style="border:1px solid gray; background-color:none; padding-top: 5px; margin-bottom: 20px; border-radius: 10px;">
+                                <div>
+                                    <img src="./assets/images/product-details/rating.PNG" style="height:20px;padding-bottom:2px; padding-left: 3px;"/>
+                                    <span> | </span> 
+                                    <span style="font-size: 13px;"> user1_id </span> 
+                                    <span> | </span> 
+                                    <span style="font-size: 13px;"> 0000.00.00 </span>
+                                </div>
+                                <hr style="margin:5px; width:98%;"/>
+                                <div style="margin:12px;">
+                                    {Review}
+                                     It is a long established fact that a reader will be distracted by the readable content of a page
+                                     when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                                     distribution of letters, as opposed to using 'Content here, content here', making it look like 
+                                     readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                     their default model text, and a search for 'lorem ipsum' will uncover many web sites still in 
+                                     their infancy. Various versions have evolved over the years, sometimes by accident, sometimes
+                                      on purpose (injected humour and the like).
+                                </div>
+                            </div>
+                            <div class='single-review' style="border:1px solid gray; background-color:none;padding-top: 5px; margin-bottom: 20px; border-radius: 10px;">
+                                <div>
+                                    <img src="./assets/images/product-details/rating.PNG" style="height:20px;padding-bottom:2px; padding-left: 3px;"/>
+                                    <span> | </span> 
+                                    <span style="font-size: 13px;"> user1_id </span> 
+                                    <span> | </span> 
+                                    <span style="font-size: 13px;"> 0000.00.00 </span>
+                                </div>
+                                <hr style="margin:5px; width:98%;"/>
+                                <div style="margin:12px;">
+                                    {Review}
+                                     It is a long established fact that a reader will be distracted by the readable content of a page
+                                     when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                                     distribution of letters, as opposed to using 'Content here, content here', making it look like 
+                                     readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                     their default model text, and a search for 'lorem ipsum' will uncover many web sites still in 
+                                     their infancy. Various versions have evolved over the years, sometimes by accident, sometimes
+                                      on purpose (injected humour and the like).
+                                </div>
+                            </div>
+                            <button onclick="" style="width: 100%; background-color: rgb(240, 88, 32); color: white; border: none; border-radius: 10px; padding: 3px 0px;">더보기</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id='product_inquiry' class="product-details-info">
+            <div class="single-block">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="inquiry_list">
+                            <h5 style="font-weight:500; display: inline;">상품문의</h5>
+                            <button onclick="" style="display:inline; float:right; width: 50px; background-color: rgb(240, 88, 32); color: white; border: none; border-radius: 10px; margin-top: 10px; margin-right: 7px;">작성</button>
+
+                            <hr/>
+                            <table style="width:100%; margin-bottom:10px;">
+                                <tr style="border-bottom:1px solid gray;">
+                                    <th class="col-lg-1 -col-12" style="text-align: center;">번호</th>
+                                    <th class="col-lg-1 -col-12" style="text-align: center; border-left:1px solid gray; ">답변상태</th>
+                                    <th class="col-lg-1 -col-12" style="text-align: center; border-left:1px solid gray; ">문의유형</th>
+                                    <th class="col-lg-7 -col-12" style="text-align: center; border-left:1px solid gray; ">문의제목</th>
+                                    <th class="col-lg-1 -col-12" style="text-align: center; border-left:1px solid gray; ">작성자</th>
+                                    <th class="col-lg-1 -col-12" style="text-align: center; border-left:1px solid gray; ">작성일자</th>
+                                </tr>
+                                <tr id = "inquiry_0" class="single-inquiry" style="text-align:center; border-bottom:1px solid gray;">
+                                    <td>0</td>
+                                    <td style="border-left:1px solid gray">답변완료</td>
+                                    <td style="border-left:1px solid gray">배송</td>
+                                    <td style="border-left:1px solid gray"><button style='background-color: whitesmoke; border:none;' onclick="">택배가 안 옵니다...</button></td>
+                                    <td style="border-left:1px solid gray">*****</td>
+                                    <td style="border-left:1px solid gray">0000.00.00</td>
+                                </tr>
+                                <tr id = "inquiry_0_answer" style="display:none;">
+                                    <td colspan="6">
+                                        <div style="margin : 10px; background-color:rgb(236, 236, 236); padding: 5px;;"> 
+                                            <div style="margin: 2px;">[질문] 일주일이 지났는데 아직 택배가 오지 않았어요? 언제쯤 도착할까요?</div>
+                                            <div style="margin: 2px;">[답변]</div>
+                                            <div style="margin: 2px 8px; text-indent: 10px;">
+                                                고객님, 물품 전달이 늦어서 죄송합니다. 재고 부족으로 인해 배송이 지체되었습니다.
+                                                내일 오전 중으로 물품이 배송될 수 있도록 조치하겠습니다. 불편을 드려 죄송합니다.
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>   
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- End Item Details -->
+
+    <div class="inquiry_Popup" style="z-index: 1; margin: auto auto; display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">상품 문의 남기기</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inquiry-email">이메일</label>
+                            <input class="form-control" type="email" id="inquiry-email" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="review-rating">문의유형</label>
+                            <select class="form-control" id="inquiry-type">
+                                <option>상품(성능/사이즈)</option>
+                                <option>배송</option>
+                                <option>교환</option>
+                                <option>반품/취소/환불</option>
+                                <option>기타</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="inquiry-subject">제목</label>
+                            <input class="form-control" type="text" id="inquiry-subject" required>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="review-message">질문</label>
+                    <textarea class="form-control" id="review-message" rows="8" required></textarea>
+                </div>
+            </div>
+            <div class="modal-footer button">
+                <button type="button" class="btn">제출</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div class="modal fade review-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">구매후기 남기기</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="review-name">성함(이름)</label>
+                                <input class="form-control" type="text" id="review-name" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="review-email">이메일</label>
+                                <input class="form-control" type="email" id="review-email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="review-subject">상품명</label>
+                                <input class="form-control" type="text" id="review-subject" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="review-rating">구매후기</label>
+                                <select class="form-control" id="review-rating">
+                                    <option>5점</option>
+                                    <option>4점</option>
+                                    <option>3점</option>
+                                    <option>2점</option>
+                                    <option>1점</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-message">후기</label>
+                        <textarea class="form-control" id="review-message" rows="8" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer button">
+                    <button type="button" class="btn">제출</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Review Modal -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <!-- End Footer Top -->
+        <!-- Start Footer Middle -->
+        <div class="footer-middle">
+            <div class="container">
+                <div class="bottom-inner">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-contact">
+                                <h3>고객센터</h3>
+                                <p class="phone">경기도 00시 00로 00(상세주소)</p>
+                                <ul>
+                                    <li><span>Tel: </span>0000-0000</li>
+                                    <li><span>운영시간: </span> (주중)9.00 am - 8.00 pm / (주말)10.00 am - 6.00 pm</li>
+                                </ul>
+                                <p class="mail">
+                                    <a href="">business_test@gmail.com</a>
+                                </p>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer our-app">
+                                <h3>모바일 앱 설치</h3>
+                                <ul class="app-btn">
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="lni lni-apple"></i>
+                                            <span class="small-title">Download on the</span>
+                                            <span class="big-title">App Store</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i class="lni lni-play-store"></i>
+                                            <span class="small-title">Download on the</span>
+                                            <span class="big-title">Google Play</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>연락처</h3>
+                                <ul>
+                                    <li><span>Tel: </span>0000-0000</li>
+                                    <li><span>Fax: </span>00-000-0000</li>
+                                    <li><span>Mail: </span>business_test@gmail.com</li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-12">
+                        </div>
+                        <div class="col-lg-4 col-12">
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <ul class="socila">
+                                <li>
+                                    <span>소셜 : </span>
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        const current = document.getElementById("current");
+        const opacity = 0.6;
+        const imgs = document.querySelectorAll(".img");
+        imgs.forEach(img => {
+            img.addEventListener("click", (e) => {
+                //reset opacity
+                imgs.forEach(img => {
+                    img.style.opacity = 1;
+                });
+                current.src = e.target.src;
+                //adding class 
+                //current.classList.add("fade-in");
+                //opacity
+                e.target.style.opacity = opacity;
+            });
+        });
+    </script>
+</body>
+
+</html>
