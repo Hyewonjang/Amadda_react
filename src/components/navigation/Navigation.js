@@ -21,7 +21,11 @@ const Navigation = (props) => {
                      
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="col-lg-4 col-md-4 col-12">
+=======
+                  <div className="col-lg-4 col-md-4 col-12" style={{marginBottom:'0px'}}>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                     <div className="top-middle">
                         
                           <ul className="useful-links">
@@ -31,7 +35,11 @@ const Navigation = (props) => {
 
                         {props.authState === true &&
                           <ul className="useful-links">
+<<<<<<< HEAD
                             
+=======
+                            <li><a href="purchase_history.html">구매 내역</a></li>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                             <li><a href="purchase_cycle.html">구매주기 설정 사항</a></li>
                           </ul>
                         }
@@ -44,16 +52,27 @@ const Navigation = (props) => {
                               <i className="lni lni-user"></i>
                               {props.authState === false && <span>안녕하세요!</span>}
                               {props.authState === true && <span>{props.userDetail.userEmail}님</span>}
+<<<<<<< HEAD
 
                               {/* 지금은 userEmail로 되어 있지만 닉네임을 가져와야 한다. */}
                           </div>
                             {props.authState === false &&
                                 <ul className="user-login">
+=======
+                          </div>
+                            {props.authState === false &&
+                                <ul className="user-login">
+                                    
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                                     <li>
                                         <Link to='/auth' className='removeUnderbar'>로그인</Link>
                                     </li>
                                     <li>
+<<<<<<< HEAD
                                         <Link to='/new-member' className='removeUnderbar'>회원가입</Link>
+=======
+                                        <Link to='/auth' className='removeUnderbar'>회원가입</Link>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                                     </li>
                                 </ul>
                             }
@@ -65,7 +84,11 @@ const Navigation = (props) => {
                                     <Link to='/' className='removeUnderbar' onClick={props.logout}>로그아웃</Link>
                                 </li>
                                 <li>
+<<<<<<< HEAD
                                     <Link to='/my-page'>마이페이지</Link>
+=======
+                                    <a href="mypage.html">마이페이지</a>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                                 </li>
                             </ul>
                             }
@@ -81,9 +104,15 @@ const Navigation = (props) => {
                 <div className="row align-items-center">
                     <div className="col-lg-3 col-md-3 col-7">
                         {/* <!-- Start Header Logo --> */}
+<<<<<<< HEAD
                         <Link className="navbar-brand" to="/">
                           <img src={amaddaLogo} alt="Logo" />
                         </Link>
+=======
+                        <a className="navbar-brand" href="index.html">
+                          <img src={amaddaLogo} alt="Logo" />
+                        </a>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                         {/* <!-- End Header Logo --> */}
                     </div>
                     <div className="col-lg-5 col-md-7 d-xs-none">
@@ -92,7 +121,20 @@ const Navigation = (props) => {
                             {/* <!-- navbar search start --> */}
                             <div className="navbar-search search-style-5">
                                 <div className="search-select">
+<<<<<<< HEAD
                            
+=======
+                                    {/* <!-- <div class="select-position">
+                                        <select id="select1">
+                                            <option selected>All</option>
+                                            <option value="1">option 01</option>
+                                            <option value="2">option 02</option>
+                                            <option value="3">option 03</option>
+                                            <option value="4">option 04</option>
+                                            <option value="5">option 05</option>
+                                        </select>
+                                    </div> --> */}
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                                 </div>
                                 <div className="search-input">
                                     <input type="text" placeholder="Search" />
@@ -171,7 +213,11 @@ const Navigation = (props) => {
                         {/* <!-- End Mega Category Menu --> */}
                         {/* <!-- Start Navbar --> */}
                         <nav className="navbar navbar-expand-lg">
+<<<<<<< HEAD
                             <button className="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+=======
+                            <button className="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" 
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="toggler-icon"></span>
@@ -186,7 +232,11 @@ const Navigation = (props) => {
                 <div className="col-lg-4 col-md-6 col-12">
                     {/* <!-- Start Nav Social --> */}
                     <div className="nav-social">
+<<<<<<< HEAD
                       <ul>
+=======
+                      <ul style={{marginTop:'15px'}}>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                         <li>
                             <a href="https://www.facebook.com"><i className="lni lni-facebook-filled"></i></a>
                         </li>

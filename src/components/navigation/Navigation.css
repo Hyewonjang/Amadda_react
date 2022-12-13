@@ -2073,6 +2073,7 @@ top: -1px;
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 .header .main-menu-search .navbar-search{
   display: flex;
 }
@@ -2083,6 +2084,8 @@ top: -1px;
   align-items: center;
 }
 
+=======
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 .header .main-menu-search .search-btn button {
   background-color: rgb(240, 88, 32);
   color: #fff;
@@ -2091,8 +2094,13 @@ top: -1px;
   padding: 0;
   font-size: 20px;
   border: 0;
+<<<<<<< HEAD
   margin: 20px;
   border-radius: 0 4px 4px 0;
+=======
+  border-radius: 0 4px 4px 0;
+  margin-left: -2px;
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 18px;

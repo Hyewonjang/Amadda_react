@@ -108,6 +108,7 @@
 
 .event-image-text{
   text-align: center;
+<<<<<<< HEAD
   color: #fff;
   position: relative;
 }
@@ -126,3 +127,8 @@
   height: 40vh;
   border-radius: 25px;
 }
+=======
+  color: white;
+}
+
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393

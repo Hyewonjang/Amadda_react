@@ -1,9 +1,14 @@
 import classes from './Login.module.css';
+<<<<<<< HEAD
 import { useState } from 'react';
+=======
+import { useRef } from 'react';
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 import { useHistory } from 'react-router-dom';
 
 
 const Login = (props) => {
+<<<<<<< HEAD
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
 
@@ -62,6 +67,34 @@ const Login = (props) => {
       <input id='password' type='password' placeholder='password' className={classes.info} onChange={passwordInputChangeHandler} value={enteredPassword} />
       {!enteredPasswordIsValid && <h6 className={classes.errorText}>비밀번호를 입력해주세요.</h6>}
       <input type='submit' value='로그인' className={classes.submit} />
+=======
+  const emailInputRef = useRef();
+  const passwordInputRef = useRef();
+
+  const history = useHistory();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    
+    const userInformation = {
+      userEmail: emailInputRef.current.value,
+      userPassword: passwordInputRef.current.value
+    };
+    
+    props.onInformation(userInformation);
+    
+    if(userInformation){
+      history.push('/');
+    };
+  };
+
+  return(
+    <form onSubmit={submitHandler}>
+      <input id='email' type='email' placeholder='E - MAIL' className={classes.info} ref={emailInputRef} />
+      <input id='password' type='password' placeholder='password' className={classes.info} ref={passwordInputRef} />
+      <input type='submit' value='로그인' className={classes.submit} />
+      <button type='button' onClick={props.onModeChange}>회원이 아니라면?</button>
+>>>>>>> 383d0978984ac2420961919d398a75ed7c818393
     </form>
   )
 };
