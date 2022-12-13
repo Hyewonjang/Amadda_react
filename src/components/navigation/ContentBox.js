@@ -5,7 +5,7 @@ const ContentBox = (props) => {
     <section className="item-details section">
       <div className="container">
         <div className="top-area">
-          <div className="row align-items-center">
+          <div className="row align-items-center" style={{paddingLeft:'4%'}}>
             {props.children}
           </div>
         </div>

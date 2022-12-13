@@ -20,6 +20,8 @@ import Product_details from './pages/Product_details';
 import Shopping_basket from './pages/Shopping_basket';
 import RW_Review from './pages/Rw_review';
 import Payment from './pages/Payment';
+import PurchaseHistory from './components/myPage/PurchaseHistory';
+import Subscribe from './components/myPage/Subscribe';
 
 function App() {
   const [isAuthed, setIsAuthed] = useState(false);
@@ -131,6 +133,22 @@ function App() {
               <Events />
             </Navigation>
           </Route>
+
+          <Route path='/purchase-history' exact>
+            <Navigation isAuthed={unauthedHandler} authState={isAuthed}>
+              <Route path='/purchase-history' exact>  
+                <PurchaseHistory />
+              </Route>
+            </Navigation>
+          </Route>
+
+          <Route path='/subscribe' exact>
+            <Navigation isAuthed={unauthedHandler} authState={isAuthed}>
+              <Route path='/subscribe' exact>
+                <Subscribe/>
+              </Route>
+            </Navigation>
+          </Route>
         </Switch>
 
       </React.Fragment>
@@ -170,6 +188,14 @@ function App() {
 
           <Route path='/events' exact>
             <Events />
+          </Route>
+
+          <Route path='/purchase-history' exact>
+            <PurchaseHistory />
+          </Route>
+
+          <Route path='/subscribe' exact>
+            <Subscribe/>
           </Route>
         </Switch>
       </Navigation>

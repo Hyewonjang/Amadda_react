@@ -65,7 +65,7 @@ const InfoChange = () => {
               <h2 className="info-title-big">회원정보 수정</h2>
             </div>
 
-            <form onSubmit={infoChangeHandler}>
+            {/* <form onSubmit={infoChangeHandler}> */}
               <div className="info-box">
                 
                 <div className="info-flex">
@@ -91,21 +91,22 @@ const InfoChange = () => {
                 <div className="info-flex">
                   <label className="info-detail detail-check">관심물품 (복수 선택 가능)</label>
 
-                  <ul>
+                  <ul style={{marginTop:'10px', paddingTop:'5px'}}>
                     {categories.map((cate) => (
-                      <li>
+                      <li style={{display:"inline-block", marginRight:'20px'}}>
                         <input type="checkbox" key={cate.num} value={cate.cate} id="val-interest" className='checkbox' />
                         <label htmlFor="val-interest">{cate.cate}</label>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="info-flex-center">
+
+                <div className="info-flex-center" style={{paddingTop:'25px'}}>
                   <input type="submit" value="수정하기" />
                 </div>
                 
               </div>
-            </form>
+            {/* </form> */}
           </div>
         </div>
       </div>

@@ -1460,7 +1460,8 @@ top: -1px;
 
 .header .topbar {
   background-color: #e55934;
-  padding: 18px 0;
+  padding-top: 18px;
+  padding-bottom: 7px;
 }
 
 @media (max-width: 767px) {
@@ -1548,10 +1549,11 @@ top: -1px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .header .topbar .top-middle .useful-links li a:hover {
-  color: rgb(240, 88, 32);
+  color: black;
 }
 
 .header .topbar .top-end {
@@ -2073,8 +2075,7 @@ top: -1px;
   font-size: 14px;
 }
 
-<<<<<<< HEAD
-.header .main-menu-search .navbar-search{
+/* .header .main-menu-search .navbar-search{
   display: flex;
 }
 
@@ -2082,10 +2083,8 @@ top: -1px;
   width: 45px;
   height: 45px;
   align-items: center;
-}
+} */
 
-=======
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 .header .main-menu-search .search-btn button {
   background-color: rgb(240, 88, 32);
   color: #fff;
@@ -2094,13 +2093,10 @@ top: -1px;
   padding: 0;
   font-size: 20px;
   border: 0;
-<<<<<<< HEAD
-  margin: 20px;
-  border-radius: 0 4px 4px 0;
-=======
+  /* margin: 20px;
+  border-radius: 0 4px 4px 0; */
   border-radius: 0 4px 4px 0;
   margin-left: -2px;
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 18px;
@@ -2916,3 +2912,32 @@ top: 2px;
   font-weight: 400;
 }
 
+.lni-cart{
+  color:black;
+  border:1px solid gray;
+  border-radius:100%;
+  padding:10px;
+  font-size:20px;
+  float: right;
+}
+
+.lni-cart:hover{
+  background-color: rgb(240, 88, 32);
+  color:white;
+  border:0px solid white;
+}
+
+.lni-heart-filled{
+  color:black;
+  border:1px solid gray;
+  border-radius:100%;
+  padding:10px;
+  font-size:20px;
+  float:right;
+}
+
+.lni-heart-filled:hover{
+  background-color: rgb(240, 88, 32);
+  color:white;
+  border:0px solid white;
+}

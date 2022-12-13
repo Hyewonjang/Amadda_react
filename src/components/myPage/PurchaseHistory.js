@@ -38,7 +38,7 @@ const DUMMY_HISTORY = [
 const PurchaseHistory = () => {
   return(
     <section class="shopping-basket section">
-    <div class="container">
+    <div class="container" >
         <div class="top-area">
             <div class="row align-items-center">
                 <div class="shopping-list-title">
@@ -48,7 +48,7 @@ const PurchaseHistory = () => {
                         <div class="col-lg-2 col-12 row-name">결제금액</div>
                         <div class="col-lg-2 col-12 row-name">구매일자</div>
                         <div class="col-lg-2 col-12 row-name">추가정보</div>
-                        <div class="col-lg-1 col-12 row-name">배송상태</div>
+                        <div class="col-lg-1 col-12 row-name" style={{fontSize:'12px', fontWeight:'normal'}}>배송상태</div>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ const PurchaseHistory = () => {
                 {DUMMY_HISTORY.map((item) => (
                     <div class="single-item">
                         <div class="row row2">
-                            <div class="col-lg-4 col-12">
+                            <div class="col-lg-4 col-12" style={{marginTop:'5px'}}>
                                 <div style={{float: 'left'}}><img src={item.productImage} className='product-image' /></div>
                                 <div style={{float: 'left'}}>
                                     <div style={{paddingTop: '28px', fontWeight: '600'}}>{item.productName}</div>
@@ -76,10 +76,10 @@ const PurchaseHistory = () => {
                                 <div><button class="use-coupon">자세히</button></div>
 
                             </div>
-                            <div class="col-lg-1 col-12" style={{paddingTop: '35px'}}>{item.deliveryStatus}</div>
+                            <div class="col-lg-1 col-12" style={{paddingTop: '35px', fontSize:'12px', fontWeight:'normal'}}>{item.deliveryStatus}</div>
                         </div>
                         <div class="col-12">
-                            <div style={{float: 'right'}}>
+                            <div style={{float: 'right', marginTop:'-20px', marginBottom:'10px'}}>
                                 <div><button class="use-coupon use-coupon1">미수령</button>
                                 <button class="use-coupon use-coupon1">반품신청</button>
                                 <button class="use-coupon use-coupon1">교환신청</button>
@@ -88,21 +88,21 @@ const PurchaseHistory = () => {
                         </div>
                     </div>
                 ))}
+            </div>
 
-        <div style={{height: '100px', marginTop: '50px'}} className="select-num"> 
-            <ul style={{listStyle: 'none', marginLeft: '500px'}}>
-                <li style={{float: 'left'}}><a class="page-link" href="#">1</a></li>
-                <li style={{float: 'left'}}><a class="page-link" href="#">2</a></li>
-                <li style={{float: 'left'}}><a class="page-link" href="#">3</a></li>
-                <li style={{float: 'left'}}><a class="page-link" href="#">4</a></li>
-                <li style={{float: 'left'}}><a class="page-link" href="#">5</a></li>
-                <li style={{float: 'left'}}><a class="page-link" href="#">6</a></li>
+        <div style={{width:'100%'}} className="select-num"> 
+            <ul style={{listStyle: 'none', marginTop:'25px', padding:'auto auto', width:'100%', textAlign:'center'}}>
+                <li style={{display:'inline-block', color:'black'}}><a class="page-link" href="#">1</a></li>
+                {/* <li style={{display:'inline-block', color:'black'}}><a class="page-link" href="#">2</a></li>
+                <li style={{display:'inline-block', color:'black'}}><a class="page-link" href="#">3</a></li>
+                <li style={{display:'inline-block', color:'black'}}><a class="page-link" href="#">4</a></li>
+                <li style={{display:'inline-block', color:'black'}}><a class="page-link" href="#">5</a></li>
+                <li style={{display:'inline-block', color:'black'}}><a class="page-link" href="#">6</a></li> */}
             </ul>
         </div>
         
 
             
-        </div> 
     </div>
     </div>
     </section>

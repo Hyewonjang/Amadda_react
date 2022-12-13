@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/navigation/Footer';
 import ContentBox from '../components/navigation/ContentBox';
 import BreadCrumb from '../components/navigation/BreadCrumb';
-<<<<<<< HEAD
 // import SlideObject from '../components/slide/SlideObject';
 
 const DUMMY_CATEGORY = [
@@ -41,17 +40,17 @@ const DUMMY_CATEGORY = [
 const DUMMY_EVENTS = [
   {
     id: 'e1',
-    eventImage: 'img/product-1.jpg',
+    eventImage: 'img/product-4.jpg',
     eventTitle: '특별할인 이벤트'
   },
   {
     id: 'e2',
-    eventImage: 'img/product-2.jpg',
+    eventImage: 'img/product-5.jpg',
     eventTitle: '폐업정리'
   },
   {
     id: 'e3',
-    eventImage: 'img/product-3.jpg',
+    eventImage: 'img/product-6.jpg',
     eventTitle: '2+1 이벤트'
   },
 ];
@@ -62,45 +61,12 @@ const DUMMY_EVENTS = [
 
 const Home = (props) => {
 
-=======
-import SlideObject from '../components/slide/SlideObject';
-import Navigation from './../components/navigation/Navigation';
 
-const Home = (props) => {
-  const categoryObject = [
-    {
-      num: 1,
-      category: '욕실'
-    },
-    {
-      num: 2,
-      category: '청소/세탁용품'
-    },
-    {
-      num: 3,
-      category: '침구류'
-    },
-    {
-      num: 4,
-      category: '주방용품'
-    },
-    {
-      num: 5,
-      category: '식품'
-    },
-    {
-      num: 6,
-      category: '기타'
-    },
-  ]
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
-
-  const [currentCategory, setCurrentCategory] = useState('욕실');
+  const [currentCategory, setCurrentCategory] = useState('기타');
 
   const categoryChangeHandler = (event) => {
     setCurrentCategory(event.target.value);
   };
-<<<<<<< HEAD
   
   
 const DUMMY_ITEMS = [
@@ -123,8 +89,6 @@ const DUMMY_ITEMS = [
     image: 'img/product-3.jpg',
   },
 ];
-=======
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 
   return(
     <React.Fragment>
@@ -149,24 +113,19 @@ const DUMMY_ITEMS = [
             <div className='category-box'>
               <div className='slide-content'>
                 <ul>
-<<<<<<< HEAD
                   {DUMMY_CATEGORY.map((category) => (
-=======
-                  {categoryObject.map((category) => (
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
                     <li className='category-list'><button onClick={categoryChangeHandler} key={category.num} value={category.category}>{category.category}</button></li>
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
               <div>
                 {/* <SlideObject onCurrentCategory={currentCategory} /> */}
-                <div className='event-box'>
+                <div className='event-box' style={{paddingBottom:'20px'}}>
                   {DUMMY_ITEMS.map((cateItems) => (
                     <div className='event' style={{marginLeft: '30px'}}>
                       <div className='event-image'>
                         <div className='event-image-text'>
-                          <div>{cateItems.item}</div>
+                          <div style={{paddingTop:'20px'}}>{cateItems.item}</div>
                           <img src={cateItems.image} />
                         </div>
                       </div>
@@ -175,11 +134,6 @@ const DUMMY_ITEMS = [
                 </div>
               </div>
               
-=======
-              <div className='slide'>
-                <SlideObject onCurrentCategory={currentCategory} />
-              </div>
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
             </div>
            
           </ContentBox>
@@ -193,42 +147,24 @@ const DUMMY_ITEMS = [
             </div>
             <div className="col-lg-6 col-md-6 col-12">
               <ul className="breadcrumb-nav">
-                <Link className='breadcrumb-button' to='/events'>이벤트 더 보기</Link>
+                <Link className='breadcrumb-button' to='/events' style={{textDecoration : 'none'}}>이벤트 더 보기</Link>
               </ul>
             </div>
           </BreadCrumb>
           <ContentBox>
-            <div className='event-box'>
-<<<<<<< HEAD
+            <div className='event-box' style={{paddingBottom:'20px'}}>
               {DUMMY_EVENTS.map((event) => (
                 <div className='event'>
                   <div className='event-image'>
                     
                     <div className='event-image-text'>
-                      <div>{event.eventTitle}</div>
+                      <div style={{paddingTop:'20px'}}>{event.eventTitle}</div>
                       <img src={event.eventImage} />
                       
                     </div>
                   </div>
                 </div>
               ))}
-=======
-              <div className='event'>
-                <div className='event-image'>
-                  <div className='event-image-text'>사진이 밑에 있음</div>
-                </div>
-              </div>
-              <div className='event'>
-                <div className='event-image'>
-                  <div className='event-image-text'>사진이 밑에 있음</div>
-                </div>
-              </div>
-              <div className='event'>
-                <div className='event-image'>
-                  <div className='event-image-text'>사진이 밑에 있음</div>
-                </div>
-              </div>
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
             </div>
           </ContentBox>
          
@@ -246,7 +182,6 @@ const DUMMY_ITEMS = [
           </BreadCrumb>
           
 
-<<<<<<< HEAD
           <ContentBox>
             <div className="single-item">
               <div className="row row1">
@@ -263,9 +198,6 @@ const DUMMY_ITEMS = [
               </div>
             </div>
           </ContentBox>
-=======
-          <ContentBox></ContentBox>
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 
           <BreadCrumb>
             <div className="col-lg-6 col-md-6 col-12">
@@ -282,7 +214,6 @@ const DUMMY_ITEMS = [
             </div>
           </BreadCrumb>
           <ContentBox>
-<<<<<<< HEAD
             <div className='category-box'>
               <div className='slide-content'>
                 <ul>
@@ -293,12 +224,12 @@ const DUMMY_ITEMS = [
               </div>
               <div>
                 {/* <SlideObject onCurrentCategory={currentCategory} /> */}
-                <div className='event-box'>
+                <div className='event-box' style={{paddingBottom:'20px'}}>
                   {DUMMY_ITEMS.map((cateItems) => (
                     <div className='event' style={{marginLeft: '30px'}}>
                       <div className='event-image'>
                         <div className='event-image-text'>
-                          <div>{cateItems.item}</div>
+                          <div style={{paddingTop:'20px'}}>{cateItems.item}</div>
                           <img src={cateItems.image} />
                         </div>
                       </div>
@@ -309,18 +240,6 @@ const DUMMY_ITEMS = [
               </div>
             </div>
             
-=======
-            <div className='slide-content'>
-              <ul>
-                <li>욕실</li>
-                <li>청소/세탁용품</li>
-                <li>침구류</li>
-                <li>주방용품</li>
-                <li>식품</li>
-                <li>기타</li>
-              </ul>
-            </div>
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
           </ContentBox>
 
           <BreadCrumb>
@@ -331,24 +250,20 @@ const DUMMY_ITEMS = [
             </div>
           </BreadCrumb>
           <ContentBox>
-<<<<<<< HEAD
-            <div className='event-box'>
+            <div className='event-box' style={{paddingBottom:'20px'}}>
               {DUMMY_EVENTS.map((event) => (
                 <div className='event'>
                   <div className='event-image'>
                     
                     <div className='event-image-text'>
-                      <div>{event.eventTitle}</div>
-                      <img src={event.eventImage} />
+                      <div style={{paddingTop:'20px'}}>{event.eventTitle}</div>
+                      <img src={event.eventImage} style={{objectFit:'contain'}}/>
                       
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-=======
-            
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
           </ContentBox>
         
         </React.Fragment>

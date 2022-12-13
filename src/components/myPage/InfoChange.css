@@ -1,5 +1,5 @@
 .info-card{
-  margin: 5% 0% 20% 0%;
+  margin: 5% 0% 5% 0%;
 }
 
 .info-box{
@@ -8,10 +8,10 @@
 
 
 
-/* .info-box .info-detail{
+.info-box .info-detail{
   margin: 20px 0px 20px 10px;
   width: 300px;
-} */
+}
 
 
 .info-box .info-detail.detail-check{
@@ -79,4 +79,33 @@
   padding: 0;
   width: 13px;
   height: 13px;
+}
+
+.card-body{
+  margin:5%;
+}
+
+.card-body .info-box{
+  display: inline-block;
+  
+}
+
+.info-box .info-detail{
+  margin: 20px 0px 20px 10px;
+  width: 300px;
+}
+
+.info-flex{
+  display: flex;
+  align-items: center;
+
+}
+
+.info-title{
+  color: coral;
+  margin: 0px 0px 20px 10px;
+}
+
+.info-title-big{
+  margin: 0px 0px 20px 10px;
 }
