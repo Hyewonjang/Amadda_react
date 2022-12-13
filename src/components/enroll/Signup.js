@@ -1,5 +1,4 @@
 import classes from './Signup.module.css';
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -126,32 +125,6 @@ const Signup = (props) => {
       <input id='address' type='address' placeholder='주소' className={classes.info} onChange={addressInputChangeHandler} value={enteredAddress} />
       {!enteredAddressIsValid && <h6 className={classes.errorText}>주소를 입력해주세요.</h6>}
       <input type='submit' value='회원 가입하기' className={classes.submit} />
-=======
-import { useRef } from 'react';
-
-const Signup = (props) => {
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
-
-  const submitHandler = (event) => {
-    event.preventDefault();
-    
-    const userInformation = {
-      userEmail: emailInputRef.current.value,
-      userPassword: passwordInputRef.current.value
-    };
-    
-    props.onInformation(userInformation);
-  };
-
-  return(
-    <form onSubmit={submitHandler}>
-      <input id='email' type='email' placeholder='E - MAIL' className={classes.info} ref={emailInputRef} />
-      <input id='text' type='text' placeholder='Nickname' className={classes.info} />
-      <input id='password' type='password' placeholder='password' className={classes.info} ref={passwordInputRef} />
-      <input type='submit' value='회원 가입하기' className={classes.submit} />
-      <button type='button' onClick={props.onModeChange}>기존 회원이라면?</button>
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
     </form>
   )
 };

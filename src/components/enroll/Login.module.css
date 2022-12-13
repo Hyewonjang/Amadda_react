@@ -7,7 +7,6 @@ input.info, p{
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 
 input.submit{
   margin-left: 20px;
@@ -37,14 +36,6 @@ input.submit:not(:hover){
   border: 1px solid rgb(240, 88, 32);
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   color: rgb(240, 88, 32);
-=======
-input.submit{
-  background-color: rgb(240, 88, 32);
-  cursor: pointer;
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #fff;
-  margin-bottom: 30px;
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 }
 
 *{
@@ -52,7 +43,6 @@ input.submit{
 }
 
 
-<<<<<<< HEAD
 /* bdb0f9 */
 
 .errorText{
@@ -60,6 +50,3 @@ input.submit{
   font-size: 60%;
   text-align: center;
 }
-=======
-/* bdb0f9 */
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393

@@ -7,17 +7,12 @@ input.info, p{
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 /* input.submit{
-=======
-input.submit{
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
   background-color: rgb(240, 88, 32);
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;
   color: #fff;
   margin-bottom: 30px;
-<<<<<<< HEAD
 } */
 
 input.submit{
@@ -61,10 +56,4 @@ input.submit:not(:hover){
   color: rgb(240, 88, 32);
   font-size: 60%;
   text-align: center;
-=======
-}
-
-*{
-  font-family: 'Noto Sans KR', sans-serif;
->>>>>>> 383d0978984ac2420961919d398a75ed7c818393
 }
