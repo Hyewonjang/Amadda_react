@@ -7,6 +7,9 @@ import RWR_Frame from '../components/rw_reveiw/Rw_review_frame';
 import RWR_Frame_Title from './../components/rw_reveiw/Rw_review_title';
 import RWR_Item from './../components/rw_reveiw/Rw_review_item';
 import WriteReviewPopup from '../components/popup/WriteReviewPopup';
+import product_image1 from '../assets/images/products/product-9.jpg'
+import product_image2 from '../assets/images/products/product-5.jpg'
+import product_image3 from '../assets/images/products/product-2.jpg'
 
 const RW_Review = (props) => {
   const [wrPopupShow, setWrPopupShow] = useState(0);
@@ -35,8 +38,9 @@ const RW_Review = (props) => {
         
         <RWR_Frame>
             <RWR_Frame_Title />
-            <RWR_Item propFunction = {WRP_show}/>
-            <RWR_Item propFunction = {WRP_show}/>
+            <RWR_Item propFunction = {WRP_show} productImage= {product_image1} date={'2022-03-21'} productName={'화장품 용기'} deadline={'2023-03-21'}/>
+            <RWR_Item propFunction = {WRP_show} productImage= {product_image2} date={'2022-05-15'} productName={'헤드폰'} deadline={'2023-05-15'}/>
+            <RWR_Item propFunction = {WRP_show} productImage= {product_image3} date={'2022-03-21'} productName={'공기청정기'} deadline={'2023-03-21'}/>
             <button class="review-more" onclick="">더보기</button>
         </RWR_Frame>
                 

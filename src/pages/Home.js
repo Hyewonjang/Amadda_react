@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Home.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import product_sample1_shampoo from '../assets/images/product-details/product_sample1_shampoo.jpg'
 
 import { Link } from 'react-router-dom';
 
@@ -62,7 +63,7 @@ const DUMMY_EVENTS = [
 const Home = (props) => {
 
 
-  const [currentCategory, setCurrentCategory] = useState('기타');
+  const [currentCategory, setCurrentCategory] = useState('욕실');
 
   const categoryChangeHandler = (event) => {
     setCurrentCategory(event.target.value);
@@ -74,19 +75,19 @@ const DUMMY_ITEMS = [
     id: 'i1',
     currentCategory: currentCategory,
     item: `first item of ${currentCategory}`,
-    image: 'img/product-1.jpg',
+    image: 'img/product_sample1_shampoo.jpg',
   },
   {
     id: 'i2',
     currentCategory: currentCategory,
     item: `second item of ${currentCategory}`,
-    image: 'img/product-2.jpg',
+    image: 'img/product-11.jpg',
   },
   {
     id: 'i3',
     currentCategory: currentCategory,
     item: `third item of ${currentCategory}`,
-    image: 'img/product-3.jpg',
+    image: 'img/product-12.jpg',
   },
 ];
 
@@ -122,14 +123,16 @@ const DUMMY_ITEMS = [
                 {/* <SlideObject onCurrentCategory={currentCategory} /> */}
                 <div className='event-box' style={{paddingBottom:'20px'}}>
                   {DUMMY_ITEMS.map((cateItems) => (
+                    <Link to='/product-details'>
                     <div className='event' style={{marginLeft: '30px'}}>
                       <div className='event-image'>
                         <div className='event-image-text'>
                           <div style={{paddingTop:'20px'}}>{cateItems.item}</div>
-                          <img src={cateItems.image} />
+                          <img src={cateItems.image}/>
                         </div>
                       </div>
                     </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -226,6 +229,7 @@ const DUMMY_ITEMS = [
                 {/* <SlideObject onCurrentCategory={currentCategory} /> */}
                 <div className='event-box' style={{paddingBottom:'20px'}}>
                   {DUMMY_ITEMS.map((cateItems) => (
+                    <Link to='/product-details'>
                     <div className='event' style={{marginLeft: '30px'}}>
                       <div className='event-image'>
                         <div className='event-image-text'>
@@ -234,6 +238,7 @@ const DUMMY_ITEMS = [
                         </div>
                       </div>
                     </div>
+                    </Link>
                   ))}
                   
                 </div>

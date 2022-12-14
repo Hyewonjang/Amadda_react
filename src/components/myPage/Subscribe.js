@@ -5,13 +5,13 @@ import './Subscribe.css';
 const DUMMY_SUBSCRIBE = [
     {
         id: "p1",
-        productName: "화장품 용기",
-        productPrice: 8000,
+        productName: "샴푸 펌프 병(대형)",
+        productPrice: 4500,
         productAmount: 3,
         productCycle: 30,
         productExpectedDate: '2022-12-21',
-        productImage: "img/product-9.jpg",
-        productCategoty: '기타',
+        productImage: "img/product_sample1_shampoo.jpg",
+        productCategoty: '욕실',
     },
     {
         id: "p2",
@@ -56,7 +56,7 @@ const Subscribe = () => {
                     </div>
                 </div>
                 {DUMMY_SUBSCRIBE.map((item) => (
-                    <div className="single-item" style={{color:'black'}}>
+                    <div className="single-item" style={{color:'black', paddingBottom:'10px'}}>
                         <div className="row row2">
                             <div className="col-lg-4 col-12">
                                 <div style={{float: 'left'}}><img src={item.productImage} className='product-image' /></div>
@@ -64,7 +64,7 @@ const Subscribe = () => {
                                     <div style={{paddingTop: '15px', fontWeight: '600'}}>{item.productName}</div>
                                     <div>{item.productPrice}원</div>
                                     <div style={{marginTop: '3px'}}><button className="use-coupon use-coupon2">구매영수증</button>
-                                    <button className="use-coupon use-coupon2">자세히</button></div>
+                                    <a href='/product-details'><button className="use-coupon use-coupon2">자세히</button></a></div>
 
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ const Subscribe = () => {
                                 <div style={{paddingTop: '15px'}}>{item.productExpectedDate}</div>
                             </div>
                         </div>
-                        <div style={{float: 'right', marginTop: '-38px'}}>
+                        <div style={{float: 'right', marginTop: '-30px'}}>
                             <div><button className="use-coupon use-coupon2">자동 구매 주기 변경</button>
                             <button className="use-coupon use-coupon2">자동 구매 취소</button>
                             <button className="use-coupon use-coupon2">관련상품</button></div>

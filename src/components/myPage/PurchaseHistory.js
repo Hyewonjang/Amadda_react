@@ -1,4 +1,5 @@
 import './PurchaseHistory.css';
+import { Link } from 'react-router-dom';
 
 
 // 구매내역 더미 데이터
@@ -83,7 +84,7 @@ const PurchaseHistory = () => {
                                 <div><button class="use-coupon use-coupon1">미수령</button>
                                 <button class="use-coupon use-coupon1">반품신청</button>
                                 <button class="use-coupon use-coupon1">교환신청</button>
-                                <button class="use-coupon use-coupon1">구매후기</button></div>
+                                <Link to='/RW-Review'><button class="use-coupon use-coupon1">구매후기</button></Link></div>
                             </div>
                         </div>
                     </div>

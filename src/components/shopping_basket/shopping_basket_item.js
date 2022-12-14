@@ -43,10 +43,10 @@ const SB_Item = (props) => {
 
     return(
         <div className="single-item">
-            <div className="row" style={{paddingTop:"10px", textAlign: "center"}}>
+            <div className="row" style={{paddingTop:"10px", textAlign: "center", marginBottom:'10px'}}>
                 <div className="col-lg-4 col-12">
                     <div style={{float:"left"}}><button className="item-checked" style={{border:'1px solid gray', width: '25px', marginTop: '38px', marginRight: '15px'}} onClick={(e)=>item_checked(e, e.currentTarget.checked, 0)}><i className="lni lni-checkmark"></i></button></div>
-                    <div style={{float:"left"}}><img src={props.product_image} style={{width:'100px', height:'100px', marginRight: '15px'}}/></div>
+                    <div style={{float:"left"}}><img src={props.product_image} style={{width:'100px', height:'100px', marginRight: '15px', borderRadius:'10px'}}/></div>
                     <div style={{float:"left", textAlign: 'left'}}>
                         <div style={{paddingTop:'28px', fontWeight: '600'}}>{props.product_name}</div>
                         <div>8000원 </div>

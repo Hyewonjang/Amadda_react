@@ -74,7 +74,7 @@ const ItemReview = (props) => {
                                 <span> | </span> 
                                 <span style={{fontSize: "13px"}}> user1_id </span> 
                                 <span> | </span> 
-                                <span style={{fontSize: "13px"}}> 0000.00.00 </span>
+                                <span style={{fontSize: "13px"}}> 2020.02.01 </span>
                             </div>
                             <hr style={{margin:"5px", width:"98%"}}/>
                             <div style={{margin:"12px"}}>
@@ -94,7 +94,7 @@ const ItemReview = (props) => {
                                 <span> | </span> 
                                 <span style={{fontSize: "13px"}}> user2_id </span> 
                                 <span> | </span> 
-                                <span style={{fontSize: "13px"}}> 0000.00.00 </span>
+                                <span style={{fontSize: "13px"}}> 2021.01.21 </span>
                             </div>
                             <hr style={{margin:"5px", width:"98%"}}/>
                             <div style={{margin:"12px"}}>

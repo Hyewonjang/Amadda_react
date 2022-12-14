@@ -44,7 +44,7 @@ const Payment_content = (props) => {
             </div>
 
             <div style={{float:'right', marginRight: '70px'}}>
-                <p style={{fontSize: '17px',backgroundColor:'white'}}>결제 금액: 50000원</p>
+                <p style={{fontSize: '17px',backgroundColor:'white'}}>결제 금액: 4500원</p>
             </div>
 
             <div className="form-validation" style={{padding: '10%', display:'block'}}>

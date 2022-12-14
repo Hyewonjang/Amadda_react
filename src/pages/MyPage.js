@@ -57,6 +57,9 @@ const MyPage = () => {
           <li className="my-page-nav-item">
             <Link to='/shopping-basket' style={{color:'gray', textDecoration:'none'}}><div className="my-page-nav-link" >장바구니</div></Link>
           </li>
+          <li className="my-page-nav-item">
+            <Link to='/RW-Review' style={{color:'gray', textDecoration:'none'}}><div className="my-page-nav-link" >구매후기</div></Link>
+          </li>
 
         </ul>    
       </BreadCrumb>

@@ -86,21 +86,21 @@ const ItemBasicInfo = (props) => {
                             </div>
                             <div className="bottom-content">
                                 <div className="row align-items-end">
-                                    <div className="col-lg-4 col-md-4 col-12">
+                                    <div className="col-lg-6 col-md-4 col-12">
                                         <div className="button cart-button">
                                             <Link to='/shopping-basket' className="btn"><button className="btn" style={{width: "100%"}}><i className="lni lni-cart"></i>장바구니</button></Link>
                                         </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-4 col-12">
+                                    <div className="col-lg-6 col-md-4 col-12">
                                         <div className="button2 cart-button">
                                             <Link to='/payment' className="btn"><button className="btn">구매하기</button></Link>
                                         </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-4 col-12">
+                                    {/* <div className="col-lg-4 col-md-4 col-12">
                                         <div className="wish-button">
                                             <button className="btn"><i className="lni lni-heart"></i>찜</button>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

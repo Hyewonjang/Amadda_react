@@ -115,7 +115,7 @@ const Navigation = (props) => {
                     </div>
                     <div className="col-lg-2 d-xs-none"></div>
                     <div className="col-lg-2 d-xs-none" style={{textAlign:'right', paddingTop:'7px', paddingRight: '25px'}}>
-                        <Link to='/shopping-basket' style={{color:'black', textAlign:'right', display:'inline-block', fontSize:'18px'}}><i className="lni lni-cart" style={{float:'right'}}></i></Link>
+                        <Link to='/shopping-basket' style={{color:'black', textAlign:'right', display:'inline-block', fontSize:'18px'}}><i className="lni lni-cart lni-cart-css" style={{float:'right'}}></i></Link>
                         {/* <span style={{margin:'10px'}}></span>
                         <Link to='/shopping-basket' style={{color:'black', textAlign:'right', display:'inline-block', fontSize:'18px'}}><i className="lni lni-heart-filled" style={{float:'right'}}></i></Link> */}
                     </div>

@@ -11,10 +11,11 @@ import Select_Coupon_Popup from './../components/popup/selectCouponPopup';
 import SB_Total_Price from './../components/shopping_basket/shopping_basket_total_price';
 import product_image1 from '../assets/images/products/product-9.jpg'
 import product_image2 from '../assets/images/products/product-10.jpg'
+import product_image0 from '../assets/images/product-details/product_sample1_shampoo.jpg'
 
 
 const Shopping_basket = (props) => {
-  const [productNum, setProductNum] = useState(2);
+  const [productNum, setProductNum] = useState(1);
 
   const AddProduct =()=>{
     const count = productNum+1;
@@ -51,10 +52,11 @@ const Shopping_basket = (props) => {
             <div className="container">
                 <SB_Frame>
                     <SB_Frame_Title/>
-                    <SB_Item propFunction = {CouponPopup} product_image = {product_image1} product_name = '화장품 용기(1묶음당 4병)' preprice={8000} coupon_sale_price={0} delivery_price={3000}/>
-                    <SB_Item propFunction = {CouponPopup} product_image = {product_image1} product_name = '35온스 세제' preprice={10000} coupon_sale_price={5000} delivery_price={2000}/>
+                    <SB_Item propFunction = {CouponPopup} product_image = {product_image0} product_name = '샴푸 펌프 병(대형)' preprice={4500} coupon_sale_price={0} delivery_price={0}/>
+                    {/* <SB_Item propFunction = {CouponPopup} product_image = {product_image1} product_name = '화장품 용기(1묶음당 4병)' preprice={8000} coupon_sale_price={0} delivery_price={3000}/>
+                    <SB_Item propFunction = {CouponPopup} product_image = {product_image2} product_name = '35온스 세제' preprice={10000} coupon_sale_price={5000} delivery_price={2000}/> */}
                 </SB_Frame>
-                <SB_Total_Price product_num = {productNum} product_total_preprice={18000} total_coupon_sale_price ={5000} total_delivery_price={5000} />
+                <SB_Total_Price product_num = {productNum} product_total_preprice={4500} total_coupon_sale_price ={0} total_delivery_price={0} />
                 {cpPopupShow ? <Select_Coupon_Popup propFunction = {CouponPopup} /> : ""}
             </div>
         </section>         

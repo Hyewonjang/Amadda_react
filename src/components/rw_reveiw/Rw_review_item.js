@@ -1,4 +1,4 @@
-import product_image from '../../assets/images/products/product-9.jpg'
+
 
 const RWR_Item = (props) => {
 
@@ -11,14 +11,14 @@ const RWR_Item = (props) => {
             <div className="row" style={{paddingTop:'10px', textAlign: 'center'}}>
                 <div className="col-lg-2 col-12" style={{paddingLeft:'30px'}}>
                     <div style={{float:'left', textAlign: 'center'}}>
-                        <div style={{paddingTop:'28px', fontWeight: '600'}}>oooo-oo-oo</div>
+                        <div style={{paddingTop:'28px', fontWeight: '600'}}>{props.date}</div>
                         <div>(IC12345678)</div>
                     </div>
                 </div>
                 <div className="col-lg-4 col-12" style={{paddingLeft:'30px'}}>
-                    <div style={{float:'left'}}><img src={product_image} style={{width:'100px',height:'100px', marginRight: '15px'}}/></div>
+                    <div style={{float:'left'}}><img src={props.productImage} style={{width:'100px',height:'100px', marginRight: '15px'}}/></div>
                     <div style={{float:'left', textAlign: 'left'}}>
-                        <div style={{paddingTop:'28px', fontWeight: '600'}}>화장품 용기(1묶음당 4병)</div>
+                        <div style={{paddingTop:'28px', fontWeight: '600'}}>{props.productName}</div>
                         <div>8000원 </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ const RWR_Item = (props) => {
                     <button className="rw_review_btn" onClick={()=>write_review_popUp_visible()}>후기작성</button>
 
                 </div>
-                <div className="col-lg-3 col-12" style={{paddingTop: '35px'}}>XXXX-XX-XX</div>
+                <div className="col-lg-3 col-12" style={{paddingTop: '35px'}}>{props.deadline}</div>
             </div>
         </div>
     

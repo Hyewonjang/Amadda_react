@@ -108,9 +108,10 @@
 
 .event-image-text{
   text-align: center;
-  /* color: #fff;
+  color: #fff;
   position: relative;
 }
+
 
 .event-image-text div{
   position: absolute;
@@ -125,7 +126,5 @@
   width: 20vw;
   height: 40vh;
   border-radius: 25px;
-} */
-  color: white;
 }
 

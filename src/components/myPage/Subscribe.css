@@ -60,3 +60,7 @@
   justify-content: center;
 }
 
+.use-coupon2:hover{
+  background-color: black;
+  color: white;
+}

@@ -2912,7 +2912,7 @@ top: 2px;
   font-weight: 400;
 }
 
-.lni-cart{
+.lni-cart-css{
   color:black;
   border:1px solid gray;
   border-radius:100%;
@@ -2921,7 +2921,7 @@ top: 2px;
   float: right;
 }
 
-.lni-cart:hover{
+.lni-cart-css:hover{
   background-color: rgb(240, 88, 32);
   color:white;
   border:0px solid white;
